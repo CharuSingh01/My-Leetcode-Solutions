@@ -1,6 +1,7 @@
 // Brute Force:
 // Find the sum of all subarrays and find the maximum sum.
 // Time Complexity: O(N^3)
+// Space Complecity: O(1)
 
 // class Solution {
 //     public int maxSubArray(int[] nums) {
@@ -19,7 +20,12 @@
 // }
 
 // Optimised Solution: Kadagne's Algorithm
-
+//We will take two sum, one curr and one best. curr sum will add the next element of array
+//only if arr[i]+currSum>arr[i]. Else we will start the value of currSum again with the 
+// current element of array.
+// bestSum= max(bestSum,currSum)
+// Time Complexity: O(N)
+//Space Complexity: O(1)
 
 class Solution {
     public int maxSubArray(int[] nums) {

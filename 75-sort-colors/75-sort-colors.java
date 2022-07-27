@@ -12,7 +12,7 @@
 // if arr[i]=0  swap i,j  i++  j++
 // if arr[i]=1  i++
 // if arr[i]=2  swap i,k  k-- 
-// loop will run while i<k
+// loop will run while i<=k
 
 
 class Solution {

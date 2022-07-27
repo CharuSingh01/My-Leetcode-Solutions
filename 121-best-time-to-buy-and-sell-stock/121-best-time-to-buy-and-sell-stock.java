@@ -15,12 +15,14 @@
 //     }
 // }
 
+
 // Optimised Solution:
 // take two variables, BestStock and CurrStock.
 // Take a variable min which will always update it's value to the minimum value of array 
 // while traversing the array.
 // CurrStock= current element-min
 // update the BestStock by max(BestStock, CurrStock)
+// Time Complexity: O(N)
 
 
 class Solution {

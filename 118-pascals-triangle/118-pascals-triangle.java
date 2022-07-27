@@ -7,15 +7,6 @@ class Solution {
             result.add(bc);
             return result;
         }
-           
-        // if(n==2){
-        //     List<Integer> bc=new ArrayList<>();
-        //     bc.add(1);
-        //     bc.add(1);
-        //     List<List<Integer>> result=new ArrayList<>();
-        //     result.add(bc);
-        //     return result;
-        // }
         List<List<Integer>> pres=generate(n-1);
         List<Integer> llist=pres.get(pres.size()-1);
         List<Integer>mres=new ArrayList<>();
@@ -29,3 +20,5 @@ class Solution {
     }
  
 }
+
+// TIME COMPLEXITY: O(N^2)

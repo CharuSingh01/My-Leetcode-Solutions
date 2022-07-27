@@ -1,3 +1,18 @@
+// Number of permutations for a string of lenght n is n! (n factorial).
+
+// Brute Force:
+// find all the permutations (time complexity: O(N*N!) ) and then find the next permutation
+// of the given permutation.
+
+// Optimised Approach
+// find the dip by traversing right to left. (a[i]<a[i+1])
+// find the first larger element than dip element from the right side
+// swap the larger and dip element
+// reverse  (dip index+1 to end of the array)
+// Time Complexity: O(N) because we are only traversing an array one time in every loop
+
+
+
 class Solution {
     public void nextPermutation(int[] nums) {
         int i=nums.length-2;
@@ -21,7 +36,6 @@ class Solution {
         int temp=nums[i];
         nums[i]=nums[val];
         nums[val]=temp;
-        //System.out.println(i+" "+val);
         reverse(nums,i+1,nums.length-1);
     }
     public void reverse(int[] nums, int i, int j){

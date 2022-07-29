@@ -1,3 +1,9 @@
+// Approach 
+//Sort the array according to starting time
+//Create a stack and initially push 1st values of starting and ending time
+// Now while pushing the other start time end time pair apply 3 conditions:
+// if 
+
 class Solution {
     public int[][] merge(int[][] intervals) {
         Pair[] arr=new Pair[intervals.length];
@@ -14,8 +20,7 @@ class Solution {
             Pair mp=arr[i];
             int stime=mp.s;
             int etime=mp.e;
-            if(stime<st.peek() && etime<st.peek())continue;
-            else if(stime<=st.peek() && etime>st.peek()){
+            if(stime<=st.peek() && etime>st.peek()){
                 st.pop();
                 st.push(etime);
             }

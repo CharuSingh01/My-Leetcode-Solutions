@@ -1,8 +1,20 @@
+// Brute Force Approach:
+// Sort the array according to starting time
+// for every pair, find the pairs which are merging with it and add the final pair after
+// merging to a data structure.
+// Time Complexity: O(NlogN) for sortinig the array and O(N^2) for checking values for each // pair
+
+
+
 // Approach 
 //Sort the array according to starting time
 //Create a stack and initially push 1st values of starting and ending time
 // Now while pushing the other start time end time pair apply 3 conditions:
-// if 
+// if the next interal lies in between the previous interval, continue;
+// if st(next interval)<=et (previous interval) && et(next interval)> et(previous interval)
+//merge the intervals by popping the peak value of stack and adding et(next interval)
+//if st(next interval) > et(previous interval) simply push both new values to stack
+// Time Complexity: O(NlogN) for sortinig the array and O(N) for filling the stack
 
 class Solution {
     public int[][] merge(int[][] intervals) {

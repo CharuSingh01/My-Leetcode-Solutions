@@ -1,3 +1,15 @@
+// Brute Force Approach:
+// Take another 2d matrix and fill it with the first matrix using a particular order
+// Time Complexity: O(N^2)
+// Space Complexity: O(N^2)
+
+//Optimised Approach:
+// Find the transpose of matrix and then reverse each row of the matrix.
+// Time Complexity: O(N^2)
+// Space Complexity: O(1)
+
+
+
 class Solution {
     public void rotate(int[][] matrix) {
         for(int i=0;i<matrix.length;i++){

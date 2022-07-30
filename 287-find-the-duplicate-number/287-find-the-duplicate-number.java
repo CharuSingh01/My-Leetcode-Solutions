@@ -7,6 +7,15 @@
 // Time Complexity: O(N) for traversing the array and storing the values + O(N) for checking
 // the frequency 
 
+//Optimal Approach:
+// take two pointers (slow and fast). initialise them with nums[0].
+// move slow=nums[slow] and fast=nums[nums[fast]] till they reach the same value
+// keep fast again on starting point and move them equally till they reach a common point
+// return slow or fast
+// Time Complexity: O(N)
+// Space Complexity: O(1)
+
+
 class Solution {
     public int findDuplicate(int[] nums) {
         int slow=nums[0];
@@ -15,7 +24,6 @@ class Solution {
             slow=nums[slow];
             fast=nums[nums[fast]];
         } while(slow!=fast);
-       System.out.println(slow+" djksd");
         fast=nums[0];
         while(fast!=slow){
             fast=nums[fast];

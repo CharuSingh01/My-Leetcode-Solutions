@@ -138,8 +138,7 @@ class Solution {
       // space complexity: N+M
       
 // BEST APPROACH     
-  // make two checks for dummy col and dummy row and if there exists a 0 in them then
-  // make those checks false;
+  // make two checks for dummy col (1st col) and dummy row (1st row) and if there exists a 0   // in them then make those checks false;
   // simply follow the previous approach, only difference is that do not traverse dummy row
   // and dummy col. 
   // if check is false for dummy row, make it 0 in the end. and same for dummy col.

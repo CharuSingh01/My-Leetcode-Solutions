@@ -8,6 +8,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+
+// It has only optimised approach.
+// Time complexity: O(max(n,m))
+
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode temp=new ListNode(0,null);

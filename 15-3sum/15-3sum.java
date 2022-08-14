@@ -1,0 +1,34 @@
+class Solution {
+   
+    public List<List<Integer>> threeSum(int[] nums) {
+        Arrays.sort(nums);
+         List<List<Integer>> result=new ArrayList<>();
+    for(int i=0;i<nums.length-2;i++){
+            if(i==0 || (i>0 && nums[i]!=nums[i-1])){
+            int remsum=0-nums[i];
+            int low=i+1;
+            int high=nums.length-1;
+            while(low<high){
+                if(nums[low]+nums[high]==remsum){
+                    List<Integer> ele=new ArrayList<>();
+                    ele.add(nums[i]);
+                    ele.add(nums[low]);
+                    ele.add(nums[high]);
+                    result.add(ele);
+                    while(low<high && nums[low]==nums[low+1])low++;
+                     while(low<high && nums[high]==nums[high-1])high--;
+                    low++;
+                    high--;
+                }
+                else if(nums[low]+nums[high]<remsum){
+                   low++;
+                }
+                else{
+                    high--;
+                }
+            }
+        }
+    }
+        return result;
+    }
+}
